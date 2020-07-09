@@ -23,6 +23,7 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMzQ3NTQxMjItODBjYi00YzUzLWE1NzQtZTBlY2Y2NjZlNzkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
   },
   {
+    id: 3,
     title: "The Dark Knight ",
     released: "18 July 2008",
     runtime: "2h 32min",
@@ -33,6 +34,7 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg",
   },
   {
+    id: 4,
     title: "The Lobster",
     released: "16 October 2015",
     runtime: "1h 59min",
@@ -43,6 +45,7 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BNDQ1NDE5NzQ1NF5BMl5BanBnXkFtZTgwNzA5OTM2NTE@._V1_SY1000_CR0,0,705,1000_AL_.jpg",
   },
   {
+    id: 5,
     title: "Her",
     released: " 10 January 2014",
     runtime: "2h 6min",
@@ -53,6 +56,7 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_.jpg",
   },
   {
+    id: 6,
     title: "Eternal Sunshine of the Spotless Mind",
     released: "19 March 2004",
     runtime: " 1h 48min",
