@@ -7,7 +7,10 @@ import { MovieWrapper } from "../styles";
 const MovieItem = ({ movie }) => {
   return (
     <MovieWrapper className="col-md-2 col-lg-2">
-      <img alt={movie.title} src={movie.poster} />
+      <Link to={`/movies/${movie.slug}`}>
+        <img alt={movie.title} src={movie.poster} />
+      </Link>
+
       <p>{movie.title}</p>
     </MovieWrapper>
   );

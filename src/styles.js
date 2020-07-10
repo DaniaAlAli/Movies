@@ -1,5 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+export const DetailWrapper = styled.div`
+display: block;
+margin-left: auto;
+margin-right: auto;
+width 80;
+`;
+
 export const GlobalStyle = createGlobalStyle`
 body{
     align-item: center;
