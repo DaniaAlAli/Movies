@@ -1,10 +1,13 @@
 import React from "react";
 
 //Style
-import { ListWrapper } from "../styles";
+import { TitleWrap, ListWrapper } from "../styles";
 
-const MovieList = ({ movieData }) => {
-  const movieList = movieData.map((movie) => (
+//Components
+import MovieItem from "./MovieItem";
+
+const MovieList = ({ movies }) => {
+  const movieList = movies.map((movie) => (
     <MovieItem movie={movie} key={movie.id} />
   ));
 
