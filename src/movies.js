@@ -148,8 +148,8 @@ const movies = [
   {
     id: 10,
     title: "Brooklyn",
-    slug: "Doctor-Strange",
-    released: " 25 November 201",
+    slug: "Brooklyn",
+    released: "25 November 201",
     runtime: "1h 57min",
     genre: "Drama, Romance",
     stars: "/photos/3.png",
