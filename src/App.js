@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router";
 
-import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles";
 
 //Data
@@ -11,6 +10,7 @@ import movies from "./movies";
 import Home from "./components/Home";
 import MovieList from "./components/MovieList";
 import MovieDetail from "./components/MovieDetail";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
@@ -18,9 +18,11 @@ function App() {
       <GlobalStyle />
       <Switch>
         <Route path="/movies/:movieSlug">
+          <NavBar />
           <MovieDetail movies={movies} />
         </Route>
         <Route path="/movies">
+          <NavBar />
           <MovieList movies={movies} />
         </Route>
         <Route path="/">

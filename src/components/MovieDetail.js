@@ -1,8 +1,10 @@
 import React from "react";
-import { Link, useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
+import ReactPlayer from "react-player";
 
+import RecommendationList from "./RecommendationList";
 //Style
-import { DetailWrapper, MovieWrapper, ListWrapper } from "../styles";
+import { DetailWrapper, Video } from "../styles";
 
 const MovieDetail = ({ movies }) => {
   const { movieSlug } = useParams();
@@ -12,22 +14,37 @@ const MovieDetail = ({ movies }) => {
 
   return (
     <DetailWrapper>
-      {/* <Link to="/movies">
-        <p>Back to Movies</p>
-      </Link> */}
-      <h1>{movies.title}</h1>
-      <img src={movie.poster} alt={movies.title} />
-      <p>{movie.released}</p>
-      <p>{movie.plot}</p>
-      <p>{movie.runtime}</p>
-      <p>{movie.genre}</p>
-      <p>Recommended Movies</p>
-      <Link to={`/movies/${movie.recommendedSlug}`}>
-        <img alt={movie.title} src={movie.recommended} />
-      </Link>
-      <Link to="/movies">
-        <button> Back to Mugs</button>
-      </Link>
+      <h1>{movie.title}</h1>
+      <img className="main" src={movie.poster} alt={movie.title} />
+      <div></div>
+      <img className="stars" src={movie.stars} alt={movie.title} />
+      <p>
+        <span> Rating : </span> {movie.rating} / 5
+      </p>
+      <p className="rd">
+        <span> Released Date : </span>
+        {movie.released}
+      </p>
+      <p>
+        {" "}
+        <span> Plot : </span>
+        {movie.plot}
+      </p>
+      <p>
+        <span> Run Time : </span>
+        {movie.runtime}
+      </p>
+      <p>
+        <span> Genre : </span>
+        {movie.genre}
+      </p>
+      <Video>
+        <ReactPlayer url={movie.video} />
+      </Video>
+      <p>
+        <span> Recommended Movies : </span>
+      </p>
+      <RecommendationList movies={movies} movie={movie} />
     </DetailWrapper>
   );
 };
