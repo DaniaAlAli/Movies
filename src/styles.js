@@ -1,10 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 
 export const DetailWrapper = styled.div`
 display: block;
 margin-left: auto;
 margin-right: auto;
 width 80;
+
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -47,7 +49,7 @@ export const MovieWrapper = styled.div`
     color: #ffcf31;
     font-family: "Bungee Inline", cursive;
     font-size: 25px;
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -72,4 +74,58 @@ export const TitleWrap = styled.div`
   background-color: grey;
   border: grey;
   border-radius: 40px;
+`;
+
+// Dalal Aded
+
+export const NavItem = styled(NavLink)`
+  padding: 0.25em 1em;
+  color: ${(props) => props.theme.mainColor};
+
+  &.active {
+    color: ${(props) => props.theme.pink};
+  }
+`;
+
+export const NavStyled = styled.nav`
+  background-color: ${(props) => props.theme.backgroundColor};
+`;
+
+export const SearchBarStyled = styled.input`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 40%;
+`;
+
+export const LogoA = styled(Link)`
+  padding: 0.75em;
+
+  img {
+    width: 8rem;
+  }
+`;
+
+export const BodyDetail = styled.h1`
+img {
+  
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+}
+p {
+  text-align: left;
+  color: white;
+  font-family: "Bungee Inline", cursive;
+  font-size: 15px;
+  width: 70%;
+  
+`;
+
+export const CarouselImage = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 `;

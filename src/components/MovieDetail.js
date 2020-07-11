@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams, Redirect } from "react-router-dom";
 
 //Style
-import { DetailWrapper, MovieWrapper, ListWrapper } from "../styles";
+import { DetailWrapper, BodyDetail } from "../styles";
 
 const MovieDetail = ({ movies }) => {
   const { movieSlug } = useParams();
@@ -12,21 +12,21 @@ const MovieDetail = ({ movies }) => {
 
   return (
     <DetailWrapper>
-      {/* <Link to="/movies">
-        <p>Back to Movies</p>
-      </Link> */}
       <h1>{movies.title}</h1>
-      <img src={movie.poster} alt={movies.title} />
-      <p>{movie.released}</p>
-      <p>{movie.plot}</p>
-      <p>{movie.runtime}</p>
-      <p>{movie.genre}</p>
-      <p>Recommended Movies</p>
-      <Link to={`/movies/${movie.recommendedSlug}`}>
-        <img alt={movie.title} src={movie.recommended} />
-      </Link>
+      <BodyDetail>
+        <img src={movie.poster} alt={movies.title} />
+        <p style={{ backgroundColor: "#ffcf31" }}>Movie Detail</p>
+        <p>Release Date: {movie.released}</p>
+        <p>Plot: {movie.plot}</p>
+        <p>Run Time: {movie.runtime}</p>
+        <p>Genre: {movie.genre}</p>
+        <p style={{ backgroundColor: "#ffcf31" }}> Recommended Movies </p>
+        <Link to={`/movies/${movie.recommendedSlug}`}>
+          <img alt={movie.title} src={movie.recommended} />
+        </Link>
+      </BodyDetail>
       <Link to="/movies">
-        <button> Back to Mugs</button>
+        <button> Back to Movies</button>
       </Link>
     </DetailWrapper>
   );
